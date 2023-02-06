@@ -10,18 +10,18 @@ pipeline {
                 }
             }
         }
-        stage('InstallDep') {
-            agent {
-                docker { 
-                    image 'node:16.17.1-alpine'
-                }
-            }
-            steps {
-                script {
-                    gv.testdockerAgent()
-                }
-            }
-         }
+        // stage('InstallDep') {
+        //     agent {
+        //         docker { 
+        //             image 'node:16.17.1-alpine'
+        //         }
+        //     }
+        //     steps {
+        //         script {
+        //             gv.testdockerAgent()
+        //         }
+        //     }
+        //  }
          
         stage('Build') {
             steps {
