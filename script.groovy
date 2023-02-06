@@ -14,3 +14,5 @@ def testdockerAgent(){
     sh 'cd frontend'
     sh 'npm install'
 }
+
+return this
