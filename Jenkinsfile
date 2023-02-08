@@ -27,7 +27,7 @@ pipeline {
             steps {
                 script {
                     dir("frontend") {
-                        gv.buildImage 'martinsops/jendemoapp:1.0'
+                        gv.buildImage 'martinsops/jendemoapp:1.1'
                     }
                 }
             }
