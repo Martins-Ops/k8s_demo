@@ -4,10 +4,11 @@ def buildImage(String imageName) {
     
     // sh 'cd frontend'
     sh "docker build -t $imageName ."
-    sh "echo $PASS | docker login -u $USER --password-stdin"
+    sh ('echo $PASS | docker login -u $USER --password-stdin')
     sh "docker push $imageName"
 
     }
+  
 }
 
 def testdockerAgent(){
