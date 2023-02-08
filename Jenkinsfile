@@ -23,12 +23,16 @@ pipeline {
         //     }
         //  }
          
-        stage('Build') {
+        stage('Build') {  
             steps {
                 script {
-                    gv.buildImage 'martinsops/jendemoapp:1.0'
+                    dir("frontend") {
+                        gv.buildImage 'martinsops/jendemoapp:1.0'
+                    }
                 }
             }
          }
     }
 }
+
+
