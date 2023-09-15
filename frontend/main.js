@@ -6,7 +6,7 @@ const textElement = document.createElement("div");
   try {
     loadingElement.innerText = "Loading...";
     containerElement.appendChild(loadingElement);
-    const response = await fetch("http://localhost");
+    const response = await fetch("http://localhost:8080");
     const data = await response.text();
     containerElement.removeChild(loadingElement);
     textElement.innerText = data;
