@@ -9,7 +9,7 @@ const app = express();
 app.use(morgan("dev"));
 app.use(cors());
 
-app.get("/api", (_, res) => {
+app.get("/", (_, res) => {
   res.send("TALENT PLUS");
 });
 
